@@ -101,12 +101,13 @@ hold on
 plot(pathX(1), pathY(1), '.','Color',[249 195 80]/255, 'LineWidth', 0.5, 'MarkerSize',10)
 plot(pathX(end), pathY(end), 'x','Color',[249 195 80]/255, 'LineWidth', 0.5, 'MarkerSize',5)
 axis equal off;                        % Equal scaling for x and y, turn off axes/ticks
+axis tight
 
 % --- Printing the figure ---
 % Specify window units
 set(fig, 'units', 'inches')
 % Change figure and paper size
-set(fig, 'Position', [0.1 0.1 6 6], 'PaperPosition', [0.1 0.1 6 6],...
+set(fig, 'Position', [0.1 0.1 2 3], 'PaperPosition', [0.1 0.1 2 3],...
     'InvertHardcopy', 'off')
 print(fig, '-dpng', 'hamming_art_science_01.png', '-r1200')
 disp('Random Walk done!')
